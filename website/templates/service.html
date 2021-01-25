@@ -1,0 +1,186 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Mazinyo Dental Care
+{% endblock %}
+
+{% block meta_description %}Find the Current Dental Services{% endblock %}"
+
+{% block content %}
+
+
+
+  <!-- ***** Breadcrumb Area Start ***** -->
+  <div class="breadcumb-area bg-img bg-gradient-overlay" style="background-image: url({% static 'website/img/bg-img/12.jpg' %});">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12">
+          <h2 class="title">Service</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="breadcumb--con">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{% url 'home' %}"><i class="fa fa-home"></i>Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Service</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Breadcrumb Area End ***** -->
+
+  <!-- ***** Services Area Start ***** -->
+  <section class="dento-services-area mt-50 mb-50">
+    <div class="container">
+      <div class="row">
+
+        <!-- Single Service Area -->
+        {% for i in service %}
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="single-service--area text-center mb-50">
+            <div class="icon--">
+              <img src="{{ i.image.url }}" alt="image">
+            </div>
+            <h5>{{i.title}}</h5>
+            <p>{{ i.content }}</p>
+          </div>
+        </div>
+        {% endfor %}
+
+      </div>
+    </div>
+  </section>
+  <!-- ***** Services Area End ***** -->
+
+  <!-- ***** Testimonials Area Start ***** -->
+  <section class="testimonials-area section-padding-100 bg-img bg-gradient-overlay jarallax clearfix" style="background-image: url({% static 'website/img/bg-img/7.jpg' %});">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <!-- Testimonials Slides -->
+          <div class="testimonials-slides owl-carousel">
+            <!-- Single Testimonials Slide -->
+            <div class="single-testimonial-slide d-flex align-items-center">
+              <!-- Thumbnail -->
+              <div class="testimonial-thumb">
+                <img src="{% static 'website/img/bg-img/8.jpg' %}" alt="">
+              </div>
+              <!-- Content -->
+              <div class="testimonial-content">
+                <h5>“I'd been avoiding the dentist for years due to bad experiences. A reminder SMS is sent the working day beforehand. I also had a call confirming appointment. I have been a patient ever since. My dentist is very reassuring and
+                  very helpful. Excellent treatment and advice.”</h5>
+                <h6>Arron Ramsey</h6>
+                <p>Mazinyo Dental Patient</p>
+              </div>
+            </div>
+
+            <!-- Single Testimonials Slide -->
+            <div class="single-testimonial-slide d-flex align-items-center">
+              <!-- Thumbnail -->
+              <div class="testimonial-thumb">
+                <img src="{% static 'website/img/bg-img/50.jpg' %}" alt="">
+              </div>
+              <!-- Content -->
+              <div class="testimonial-content">
+               <h5>“I used to go to different Dentists because for some reason I was just not happy everytime I came back. But when I went to Mazinyo Dental Care, I knew right there that this is my permanent Dentist - No turning back .”</h5>
+                <h6>Lizzy Buthelezi</h6>
+                <p>Mazinyo Dental Patient</p>
+              </div>
+            </div>
+
+            <!-- Single Testimonials Slide -->
+            <div class="single-testimonial-slide d-flex align-items-center">
+              <!-- Thumbnail -->
+              <div class="testimonial-thumb">
+                <img src="{% static 'website/img/bg-img/51.jpg' %}" alt="">
+              </div>
+              <!-- Content -->
+              <div class="testimonial-content">
+               <h5>“It is very rare to find a Dentist who cares about your teeth and your well being at the same time, I enjoy my time at Mazinyo, the free drinks and the friendly staff - Amazing.”</h5>
+                <h6>Kabelo Ntuli</h6>
+                <p>Mazinyo Dental Patient</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** Testimonials Area End ***** -->
+
+  <!-- ***** Blog Area Start ***** -->
+  <section class="dento-blog-area section-padding-100-0 clearfix">
+    <div class="container">
+      <div class="row">
+        <!-- Section Heading -->
+        <div class="col-12">
+          <div class="section-heading text-center">
+            <h2>The Latest News</h2>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Single Blog Item -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="single-blog-item mb-100">
+            <a href="./blog-details.html">
+              <img src="./img/bg-img/4.jpg" alt="">
+            </a>
+            <!-- Blog Content -->
+            <div class="blog-content">
+              <a href="./blog-details.html" class="post-title">How your mouth bacteria can harm your lungs</a>
+              <p>Poor oral health has been associated with respiratory diseases for a number of years, as bacterial chest infections are thought to be caused by breathing in fine droplets from the throat and mouth into the lungs. This can cause infections, such as pneumonia, or could worsen an existing condition.</p>
+              <div class="post-meta">
+                <a href="#"><i class="icon_clock_alt"></i> 02 April 2020</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single Blog Item -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="single-blog-item mb-100">
+            <a href="./blog-details.html">
+              <img src="./img/bg-img/5.jpg" alt="">
+            </a>
+            <!-- Blog Content -->
+            <div class="blog-content">
+              <a href="./blog-details.html" class="post-title">What is the best kind of toothpaste to use?</a>
+              <p>Brushing your teeth at least twice a day is essential to good oral hygiene and long-lasting, healthy, white teeth. To get the most out of your daily brushing, it's smart to use the correct type of toothpaste. Most types are made to solve specific problems inside your mouth, including everything from eliminating sensitivity and rebuilding enamel to whitening teeth and freshening your breath.</p>
+              <div class="post-meta">
+                <a href="#"><i class="icon_clock_alt"></i> 28 Dec 2019</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single Blog Item -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="single-blog-item mb-100">
+            <a href="./blog-details.html">
+              <img src="./img/bg-img/6.jpg" alt="">
+            </a>
+            <!-- Blog Content -->
+            <div class="blog-content">
+              <a href="./blog-details.html" class="post-title">Why you should avoid sipping your drinks</a>
+              <p>Over time, this erosion could give rise to tooth discoloration, sensitivity, and even tooth loss. One leading cause of tooth erosion is acids in our foods and drinks, and soda and fruit juices are among the biggest offenders.</p>
+              <div class="post-meta">
+                <a href="#"><i class="icon_clock_alt"></i> 19 Aug 2020</a>
+              </div>
+            </div>
+          </div>
+        </di</div>
+    </div>
+  </section>
+  <!-- ***** Blog Area End ***** -->
+
+{% endblock %}
