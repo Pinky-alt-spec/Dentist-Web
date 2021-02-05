@@ -1,7 +1,7 @@
 import os
-# import django_heroku     # to host heroku
-# import dj_database_url   # to host heroku
-# from decouple import config  # to host heroku
+import django_heroku     # to host heroku
+import dj_database_url   # to host heroku
+from decouple import config  # to host heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -14,7 +14,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'o+2p8ctie=adeomar3$b+l=-)x2#wufaruka8+#j&=)p$5odaud#f4*phb!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['mazinyo-dental.herokuapp.com']
 
@@ -140,4 +140,4 @@ DEFAULT_FROM_EMAIL = 'pinkymonony@gmail.com'
 # EMAIL_USE_SSL = False
 ### Email Settings End ###
 
-# django_heroku.settings(locals())
+django_heroku.settings(locals())
