@@ -142,7 +142,7 @@ DEFAULT_FROM_EMAIL = 'pinkymonony@gmail.com'
 
 django_heroku.settings(locals())
 
-if os.getcwd() == '/app':
-    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-    SECURE_SSL_REDIRECT =True
-    DEBUG = False
+# if os.getcwd() == '/app':
+#     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+#     SECURE_SSL_REDIRECT =True
+#     DEBUG = False
