@@ -1,0 +1,7 @@
+version: '3'
+services:
+  pinks:
+    build: .
+    restart: always
+    ports:
+      - "80:80"
